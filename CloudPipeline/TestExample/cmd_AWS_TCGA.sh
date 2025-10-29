@@ -1,0 +1,1 @@
+nextflow -bg -c TCGA_rna_editing.awsFargate.config run TCGA_rna_editing.awsFargate.nf --run_title <title> --gdc_UUID_list <UUIDs_list_file_path> --CEI <true/false> -profile <PE/SE>,<stranded/unstranded> > log.out 2> log.err &

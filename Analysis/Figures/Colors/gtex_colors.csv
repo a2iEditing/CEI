@@ -1,0 +1,54 @@
+Tissue	Color
+Adipose - Subcutaneous	#ff6600
+Adipose - Visceral (Omentum)	#ffaa00
+Adrenal Gland	#33dd33
+Artery - Aorta	#ff5555
+Artery - Coronary	#ffaa99
+Artery - Tibial	#ff0000
+Bladder	#aa0000
+Brain - Amygdala	#eeee00
+Brain - Anterior cingulate cortex (BA24)	#eeee00
+Brain - Caudate (basal ganglia)	#eeee00
+Brain - Cerebellar Hemisphere	#eeee00
+Brain - Cerebellum	#eeee00
+Brain - Cortex	#eeee00
+Brain - Frontal Cortex (BA9)	#eeee00
+Brain - Hippocampus	#eeee00
+Brain - Hypothalamus	#eeee00
+Brain - Nucleus accumbens (basal ganglia)	#eeee00
+Brain - Putamen (basal ganglia)	#eeee00
+Brain - Spinal cord (cervical c-1)	#eeee00
+Brain - Substantia nigra	#eeee00
+Breast - Mammary Tissue	#33cccc
+Cells - EBV-transformed lymphocytes	#cc66ff
+Cells - Transformed fibroblasts	#aaeeff
+Cervix - Ectocervix	#ffcccc
+Cervix - Endocervix	#ccaadd
+Colon - Sigmoid	#eebb77
+Colon - Transverse	#cc9955
+Esophagus - Gastroesophageal Junction	#8b7355
+Esophagus - Mucosa	#552200
+Esophagus - Muscularis	#bb9988
+Fallopian Tube	#ffcccc
+Heart - Atrial Appendage	#9900ff
+Heart - Left Ventricle	#660099
+Kidney - Cortex	#22ffdd
+Liver	#aabb66
+Lung	#99ff00
+Minor Salivary Gland	#99bb88
+Muscle - Skeletal	#aaaaff
+Nerve - Tibial	#ffd700
+Ovary	#ffaaff
+Pancreas	#995522
+Pituitary	#aaff99
+Prostate	#dddddd
+Skin - Not Sun Exposed (Suprapubic)	#0000ff
+Skin - Sun Exposed (Lower leg)	#7777ff
+Small Intestine - Terminal Ileum	#555522
+Spleen	#778855
+Stomach	#ffdd99
+Testis	#aaaaaa
+Thyroid	#006600
+Uterus	#ff66ff
+Vagina	#ff5599
+Whole Blood	#ff00bb

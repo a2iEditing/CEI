@@ -1,0 +1,36 @@
+cancer_type,cancer_type_color,organ_system,organ_system_color
+BRCA,#ED2891,Breast,#e6308e
+GBM,#B2509E,Central Nervous System,#c48cbc
+LGG,#D49DC7,Central Nervous System,#c48cbc
+COAD,#98F5FF,Core_GI,#7aa8d9
+ESCA,#007EB5,Core_GI,#7aa8d9
+READ,#DAF1FC,Core_GI,#7aa8d9
+STAD,#00AEEF,Core_GI,#7aa8d9
+COADREAD,#00AEEF,Core_GI,#7aa8d9
+STES,#007EB5,Core_GI,#7aa8d9
+CHOL,#CACCDB,Developmental_GI,#4474ba
+LIHC,#104A7F,Developmental_GI,#4474ba
+PAAD,#6E7BA2,Developmental_GI,#4474ba
+ACC,#C1A72F,Endocrine,#e4e07a
+PCPG,#E8C51D,Endocrine,#e4e07a
+THCA,#F9ED32,Endocrine,#e4e07a
+UVM,#97D1A9,Eye,#98d0a8
+BLCA,#FAD2D9,Genitourinary,#f17d81
+CESC,#F6B667,Gynecologic,#f8b74a
+KICH,#FF0000,Genitourinary,#f17d81
+KIRC,#BE1E2D,Genitourinary,#f17d81
+KIRP,#F8AFB3,Genitourinary,#f17d81
+OV,#D97D25,Gynecologic,#f8b74a
+PRAD,#7E1918,Genitourinary,#f17d81
+TGCT,#BE1E2D,Genitourinary,#f17d81
+UCEC,#F89420,Gynecologic,#f8b74a
+UCS,#FBE3C7,Gynecologic,#f8b74a
+HNSC,#009444,Head and Neck,#049347
+DLBC,#3953A4,Hematologic,#b78158
+LAML,#754C29,Hematologic,#b78158
+THYM,#CEAC8F,Hematologic,#b78158
+SKCM,#BBD642,Skin,#bad540
+SARC,#00A99D,Soft Tissue,#00a89b
+LUAD,#542C88,Thoracic,#c3b2d6
+LUSC,#A084BD,Thoracic,#c3b2d6
+MESO,#D3C3E0,Thoracic,#c3b2d6
