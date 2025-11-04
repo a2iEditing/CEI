@@ -63,6 +63,11 @@ CEI provides:
 ### 🚀 Getting Started - Initialization
 
 Before running the workflows, you must follow the initialization sequence below.
+Make sure you clone and enter CEI directoery
+```bash
+git clone https://github.com/roni-fultheim/CEI.git
+cd CEI
+```
 
 #### Step 1 - Initialize the Machine
 The machine should have at least 64GB RAM, number of cores matching your chosen `NUM_THREADS` parameter in the initialization script command (16 cores is recommended).
@@ -116,7 +121,7 @@ For other organisms, you must supply all resources downloaded in pipeline and th
 
 ### Run the Analysis
 After initialization, launch the analysis workflow.     
-Example for AWS - for GCP, use the files within the GCP directory.      
+Example for AWS - for GCP, change the files path accordingly (use the files within the GCP directory).      
 [Profiles](#profiles) and [parameters](#parameters-details) detailed below.        
 
 **1. Update user parameters configuration file:**    
