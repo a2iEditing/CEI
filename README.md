@@ -137,6 +137,9 @@ nohup ~/nextflow -c CloudPipeline/AWS/SRA_pipeline/rna_editing.config -bg run Cl
 ```
 Note the `-bucket-dir <NEXTFLOW_BUCKET_WORKDIR>` is only required for AWS.        
 
+**Test Examples:**    
+Test examples with sample accessions for running the pipeline on both AWS and GCP can be found in `CloudPipeline/TestExample`.
+
 ---
     
 ### Profiles
