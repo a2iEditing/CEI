@@ -110,7 +110,7 @@ ADAR1p150_ko_cei_data = cytoplasmic_editing_index %>%
   inner_join(classification)
 
 # Plot --------------------------------------------------------------------
-source("~/Scripts/Projects/Sambuseq/InfectiousDiseases/Figures/custom_theme_and_colors.R")
+source("custom_theme_and_colors.R")
 
 
 # Supp. Fig. 4A ----------------------------------------------------------------
