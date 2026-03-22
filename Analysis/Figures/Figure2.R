@@ -380,7 +380,7 @@ fig2d = element_count_per_gene %>%
   guides(fill = guide_legend(title = "Cluster\nSize")) +
   ylab(expression("Number of  " * italic("Alu") * " elements")) +
   theme(axis.title.x = element_blank()) +
-  theme(plot.title = element_text(hjust = 1.3))
+  theme(plot.title = element_text(hjust = 1.3)) 
 
 # Fig. 2E -----------------------------------------------------------------
 
@@ -445,22 +445,23 @@ fig2g = ggplot(data.frame(x = 1:1,
 
 # Join --------------------------------------------------------------------
 library(cowplot)
-fig2 <- plot_grid(plot_grid(fig2b +
+fig2 <- plot_grid(plot_grid(fig2d, fig2f,
+                            fig2e, fig2g, 
+                            rel_widths = c(1.2, 2.7, 
+                                           2, 3.8), 
+                            labels=c("B", "C", "D", "E"), ncol = 4, nrow = 1, align = 'hv', label_size=18, axis = "lb"),
+                  plot_grid(fig2b +
                               # inset
                               patchwork::inset_element(fig2b_inset,
                                                        left   = 0.075, right = 0.35,
                                                        bottom = 0.52, top   = 0.995), 
                             fig2c,
                             rel_widths = c(9, 3),
-                            labels=c("B", "C"), ncol = 2, nrow = 1, align = 'hv', axis = "btl", label_size=18),
-                  plot_grid(fig2d, fig2e, 
-                            fig2f, fig2g, 
-                            rel_widths = c(1.2, 2, 2.5, 4), 
-                            labels=c("D", "E", "F", "G"), ncol = 4, nrow = 1, align = 'hv', label_size=18, axis = "lb"),
-                  rel_heights = c(1, 0.8), 
+                            labels=c("F", "G"), ncol = 2, nrow = 1, align = 'hv', axis = "btl", label_size=18),
+                  rel_heights = c(0.8, 1), 
                   labels=c("", ""), ncol = 1, nrow = 2, align = 'hv', label_size=18)
-save_plot(file.path(out_plots,"Figure2B-E.pdf"), fig2, ncol = 1, nrow = 3, base_height = 6.7, base_width = 20)
-save_plot(file.path(out_plots,"Figure2B-E.png"), fig2, ncol = 1, nrow = 3, base_height = 6.7, base_width = 20)
+save_plot(file.path(out_plots,"Figure2B-G.pdf"), fig2, ncol = 1, nrow = 3, base_height = 6.7, base_width = 20)
+save_plot(file.path(out_plots,"Figure2B-G.png"), fig2, ncol = 1, nrow = 3, base_height = 6.7, base_width = 20)
 
 
 
