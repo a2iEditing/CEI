@@ -106,9 +106,11 @@ mouseData_long_a2g = mouse_info %>%
                # no tandem computed for mouse
                filter(`Editing Index Type` != "Tandem Index"))
 
+ADAR1p150_ko_cei_data = cytoplasmic_editing_index %>%
+  inner_join(classification)
 
 # Plot --------------------------------------------------------------------
-source("custom_theme_and_colors.R")
+source("~/Scripts/Projects/Sambuseq/InfectiousDiseases/Figures/custom_theme_and_colors.R")
 
 
 # Supp. Fig. 4A ----------------------------------------------------------------
@@ -123,7 +125,8 @@ suppFig3a =  BetaCells_Islets_wIFN_data_long_a2g %>%
   expand_limits(y = 0) +
   scale_fill_manual(values = c(index_colors, "white")) +
   ylab("Editing index") +
-  ggtitle("Effect of IFN-treatment on editing index") +
+  ggtitle("Effect of IFN-treatment on editing index", 
+          subtitle = "Human") +
   theme(legend.title = element_blank())
 
 
@@ -196,17 +199,54 @@ suppFig3c = mouseData_long %>%
           subtitle = "Mouse") +
   theme(axis.title.x = element_blank())
 
+# Supp. Fig. 4D ----------------------------------------------------------------
+
+suppFig3d =  ADAR1p150_ko_cei_data %>%
+  filter(Data == "PRJNA343830") %>%
+  ggplot(aes(x = Genotype, y = A2GEditingIndex_Cytoplasmic, fill = Treatment)) +
+  geom_boxplot(outliers = F) +
+  geom_jitter(position = position_jitterdodge(jitter.width = 0.1), shape = 21) +
+  # ggh4x::facet_nested(~ Data + Treatment, scales = "free", space = "free") +
+  facet_grid(. ~ Data, space = "free", scales = "free") +
+  theme_custom(legend_position = "none") +
+  # theme(panel.spacing.x = unit(c(0.25, 1, 0.25), "lines")) +
+  expand_limits(y = 0) +
+  scale_fill_manual(values = chosen_colors) +
+  ylab("CEI") +
+  ggtitle("Effect of ADAR expression on CEI",
+          subtitle = "Human") +
+  theme(axis.title.x = element_blank())
+
+suppFig3e =  ADAR1p150_ko_cei_data %>%
+  filter(Data == "PRJNA590956") %>%
+  ggplot(aes(x = Genotype, y = A2GEditingIndex_Cytoplasmic, fill = Treatment)) +
+  geom_boxplot(outliers = F) +
+  geom_jitter(position = position_jitterdodge(jitter.width = 0.1), shape = 21) +
+  # ggh4x::facet_nested(~ Data + Treatment, scales = "free", space = "free") +
+  facet_grid(. ~ Data, space = "free", scales = "free") +
+  theme_custom() +
+  # theme(panel.spacing.x = unit(c(0.25, 1, 0.25), "lines")) +
+  expand_limits(y = 0) +
+  scale_fill_manual(values = chosen_colors) +
+  ylab("CEI") +
+  ggtitle("Effect of expression of ADAR1 isoform on CEI",
+          subtitle = "Human") +
+  theme(legend.title = element_blank(),
+        axis.title.x = element_blank())
+
 # Join --------------------------------------------------------------------
 library(cowplot)
 suppFig3 <- plot_grid(plot_grid(suppFig3a, suppFig3b,
                                 labels="AUTO", ncol = 2, nrow = 1, align = 'hv', axis = "tblr", label_size=18),
                       plot_grid(suppFig3c,
                                 labels=c("C"), ncol = 1, nrow = 1, align = 'hv', axis = "tblr", label_size=18), 
-                      rel_heights = c(1.2, 2),
-                      labels="", ncol = 1, nrow = 2, align = 'hv', axis = "tblr", label_size=18)
-save_plot(file.path(out_plots,"SuppFig3.1.pdf"), suppFig3, ncol = 1, nrow = 2, base_height = 8, base_width = 14)
-save_plot(file.path(out_plots,"SuppFig3.1.png"), suppFig3, ncol = 1, nrow = 2, base_height = 8, base_width = 14)
-
+                      plot_grid(suppFig3d, suppFig3e,
+                                labels=c("D", "E"), ncol = 2, nrow = 1, align = 'hv', axis = "tblr", label_size=18,
+                                rel_widths = c(4, 7)),
+                      rel_heights = c(1.2, 2, 1.2),
+                      labels="", ncol = 1, nrow = 3, align = 'hv', axis = "tblr", label_size=18)
+save_plot(file.path(out_plots,"SuppFig3.1.pdf"), suppFig3, ncol = 1, nrow = 2, base_height = 10, base_width = 14)
+save_plot(file.path(out_plots,"SuppFig3.1.png"), suppFig3, ncol = 1, nrow = 2, base_height = 10, base_width = 14)
 
 
 
