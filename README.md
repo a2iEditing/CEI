@@ -247,3 +247,13 @@ The script gives many options for different output modes, filtering, restriction
 ```bash
 findOppositeOrientationRepeatsInRegions.py --help
 ```
+
+
+## License and Third-Party Software
+
+The source code for the Cytoplasmic Editing Index (CEI) pipeline is licensed under the [GNU General Public License v3.0 (GPL-3.0)](LICENSE). 
+
+Disclaimer regarding third-party tools:
+This pipeline acts as a workflow orchestrator and relies on several external third-party software tools and libraries (including, but not limited to, Nextflow, fastp, Salmon, STAR, bedtools, samtools, and RNAEditingIndexer) to execute the analysis. These external tools are not covered by the GPL-3.0 license of this repository. They are executed via Docker containers or installed locally during the pipeline run, and remain subject to their own respective open-source licenses. 
+
+Users of this pipeline are responsible for complying with the licensing terms of all underlying third-party tools.
