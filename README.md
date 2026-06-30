@@ -3,7 +3,7 @@ A Cytoplasmic Index for Quantifying Immune-Related A-to-I RNA Editing
 
 This repository contains both the **cloud-computing platform** and **analysis code** associated with our academic paper:
 
-Cohen-Fultheim, R., Twersky, I., Krupkin, H. et al. A cytoplasmic index for quantifying immune-related A-to-I RNA editing. Genome Biol (2026).
+*Cohen-Fultheim, R., Twersky, I., Krupkin, H. et al. A cytoplasmic index for quantifying immune-related A-to-I RNA editing. Genome Biol (2026).*
 [DOI: doi.org/10.1186/s13059-026-04154-3](https://doi.org/10.1186/s13059-026-04154-3)
 
 
